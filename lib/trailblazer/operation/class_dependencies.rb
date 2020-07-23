@@ -22,7 +22,7 @@ class Trailblazer::Operation
     end
 
     private def context_for_fields(fields, ctx)
-      ctx_with_fields = Trailblazer::Context.implementation.build(fields, ctx, [ctx, {}], {}) # TODO: redundant to otions_for_public_call. how to inject aliasing etc?
+      ctx_with_fields = Trailblazer::Context.for_circuit(fields, ctx, [ctx, {}], {}) # TODO: redundant to otions_for_public_call. how to inject aliasing etc?
     end
 
     def call_with_circuit_interface((ctx, flow_options), **circuit_options)

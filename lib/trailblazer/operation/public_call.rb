@@ -52,7 +52,7 @@ module Trailblazer
 
     # @semi=public
     def flow_options
-      {context_alias: {}}
+      {}
     end
   end
 end
